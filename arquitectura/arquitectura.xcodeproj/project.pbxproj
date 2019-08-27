@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AC420D93BF88AFB44E4A3938 /* Pods_arquitectura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E77E242F6A6E5448558B3A1 /* Pods_arquitectura.framework */; };
+		DE51560A2314C88600EB6793 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5156092314C88600EB6793 /* LoginView.swift */; };
+		DE51560C2314C8F700EB6793 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE51560B2314C8F700EB6793 /* Login.storyboard */; };
+		DE51560E2314C93D00EB6793 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51560D2314C93D00EB6793 /* LoginViewModel.swift */; };
+		DE5156102314C95500EB6793 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51560F2314C95500EB6793 /* LoginModel.swift */; };
+		DE5156132314C97500EB6793 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5156122314C97500EB6793 /* LoginRouter.swift */; };
 		DE60E88123147E600073D562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60E88023147E600073D562 /* AppDelegate.swift */; };
 		DE60E88823147E6C0073D562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE60E88723147E6C0073D562 /* Assets.xcassets */; };
 		DE60E88B23147E6C0073D562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE60E88923147E6C0073D562 /* LaunchScreen.storyboard */; };
@@ -17,6 +22,11 @@
 		6D0122C9F2B70F42DA6FB8AD /* Pods-arquitectura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arquitectura.debug.xcconfig"; path = "Target Support Files/Pods-arquitectura/Pods-arquitectura.debug.xcconfig"; sourceTree = "<group>"; };
 		7CB3BE501DF618392061E40F /* Pods-arquitectura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arquitectura.release.xcconfig"; path = "Target Support Files/Pods-arquitectura/Pods-arquitectura.release.xcconfig"; sourceTree = "<group>"; };
 		9E77E242F6A6E5448558B3A1 /* Pods_arquitectura.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arquitectura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5156092314C88600EB6793 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DE51560B2314C8F700EB6793 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		DE51560D2314C93D00EB6793 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DE51560F2314C95500EB6793 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		DE5156122314C97500EB6793 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		DE60E87D23147E600073D562 /* arquitectura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arquitectura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE60E88023147E600073D562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE60E88723147E6C0073D562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +63,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE5156022314C75C00EB6793 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DE5156032314C76A00EB6793 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DE5156032314C76A00EB6793 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DE5156112314C96900EB6793 /* Routing */,
+				DE5156062314C79F00EB6793 /* View */,
+				DE5156052314C78800EB6793 /* ViewModel */,
+				DE5156042314C77500EB6793 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DE5156042314C77500EB6793 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE51560F2314C95500EB6793 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE5156052314C78800EB6793 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DE51560D2314C93D00EB6793 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DE5156062314C79F00EB6793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE5156092314C88600EB6793 /* LoginView.swift */,
+				DE51560B2314C8F700EB6793 /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE5156112314C96900EB6793 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				DE5156122314C97500EB6793 /* LoginRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 		DE60E87423147E600073D562 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +136,7 @@
 		DE60E87F23147E600073D562 /* arquitectura */ = {
 			isa = PBXGroup;
 			children = (
+				DE5156022314C75C00EB6793 /* Modules */,
 				DE60E88023147E600073D562 /* AppDelegate.swift */,
 				DE60E88723147E6C0073D562 /* Assets.xcassets */,
 				DE60E88923147E6C0073D562 /* LaunchScreen.storyboard */,
@@ -93,6 +156,7 @@
 				DE60E87923147E600073D562 /* Sources */,
 				DE60E87A23147E600073D562 /* Frameworks */,
 				DE60E87B23147E600073D562 /* Resources */,
+				9B4560F30DD27E14474C802B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,12 +207,30 @@
 			files = (
 				DE60E88B23147E6C0073D562 /* LaunchScreen.storyboard in Resources */,
 				DE60E88823147E6C0073D562 /* Assets.xcassets in Resources */,
+				DE51560C2314C8F700EB6793 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9B4560F30DD27E14474C802B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-arquitectura/Pods-arquitectura-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-arquitectura/Pods-arquitectura-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-arquitectura/Pods-arquitectura-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EFBB816EDAC6F64CA94127FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,7 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE51560A2314C88600EB6793 /* LoginView.swift in Sources */,
+				DE5156102314C95500EB6793 /* LoginModel.swift in Sources */,
 				DE60E88123147E600073D562 /* AppDelegate.swift in Sources */,
+				DE5156132314C97500EB6793 /* LoginRouter.swift in Sources */,
+				DE51560E2314C93D00EB6793 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
