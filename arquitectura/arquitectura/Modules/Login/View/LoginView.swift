@@ -8,8 +8,20 @@
 
 import UIKit
 
+//MARK: - ViewModel communication
+protocol LoginViewProtocol : class {
+    func didLoadView()
+}
+
 class LoginView: UIViewController {
 
+    @IBOutlet weak var txtCorreo: UITextField!
+    @IBOutlet weak var txtClave: UITextField!
+    @IBOutlet weak var btnIngreso: UIButton!
+    
+    
+    var viewModel: LoginViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +39,11 @@ class LoginView: UIViewController {
     }
     */
 
+}
+
+extension LoginView : LoginViewProtocol {
+    
+    func didLoadView() {
+        
+    }
 }

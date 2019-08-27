@@ -8,6 +8,20 @@
 
 import UIKit
 
-class LoginViewModel: NSObject {
+class LoginViewModel {
 
+    weak var view:LoginViewProtocol!
+    var router: LoginRouter!
+    var person:LoginModel!
+    
+    func loadView() {
+        
+        //self.person = Person(name: "Alvaro", age: 22, height: 1.79)
+        self.view.didLoadView()
+        
+    }
+    
+    func showNextScreen() {
+        //self.router.showPersonsList()
+    }
 }

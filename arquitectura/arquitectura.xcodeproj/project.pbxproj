@@ -16,6 +16,7 @@
 		DE60E88123147E600073D562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60E88023147E600073D562 /* AppDelegate.swift */; };
 		DE60E88823147E6C0073D562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE60E88723147E6C0073D562 /* Assets.xcassets */; };
 		DE60E88B23147E6C0073D562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE60E88923147E6C0073D562 /* LaunchScreen.storyboard */; };
+		FAF5CF7E2314E0470002919C /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5CF7D2314E0470002919C /* AppStoryboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DE60E88723147E6C0073D562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE60E88A23147E6C0073D562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE60E88C23147E6C0073D562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF5CF7D2314E0470002919C /* AppStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		DE60E87F23147E600073D562 /* arquitectura */ = {
 			isa = PBXGroup;
 			children = (
+				FAF5CF7C2314E0310002919C /* Extensions */,
 				DE5156022314C75C00EB6793 /* Modules */,
 				DE60E88023147E600073D562 /* AppDelegate.swift */,
 				DE60E88723147E6C0073D562 /* Assets.xcassets */,
@@ -143,6 +146,14 @@
 				DE60E88C23147E6C0073D562 /* Info.plist */,
 			);
 			path = arquitectura;
+			sourceTree = "<group>";
+		};
+		FAF5CF7C2314E0310002919C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAF5CF7D2314E0470002919C /* AppStoryboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 				DE5156102314C95500EB6793 /* LoginModel.swift in Sources */,
 				DE60E88123147E600073D562 /* AppDelegate.swift in Sources */,
 				DE5156132314C97500EB6793 /* LoginRouter.swift in Sources */,
+				FAF5CF7E2314E0470002919C /* AppStoryboard.swift in Sources */,
 				DE51560E2314C93D00EB6793 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
