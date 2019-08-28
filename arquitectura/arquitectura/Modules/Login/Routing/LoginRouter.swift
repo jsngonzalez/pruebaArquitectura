@@ -8,31 +8,36 @@
 
 import Foundation
 import UIKit
+import SwiftyUserDefaults
+
+extension storyboard {
+    static let Login = "Login"
+}
 
 
-class LoginRouter {
+class LoginRouter:BaseRouter {
     
-    private var nav : UINavigationController!
+    private var viewController : LoginView!
     
-    static func getController() -> UINavigationController {
+    static func getController() -> LoginView {
         
-        let viewController = LoginView()
+        let viewController = instance(storyboard.Login, viewController: LoginView.self)
+        
         let router = LoginRouter()
         let viewModel = LoginViewModel()
-        
-        viewController.viewModel = viewModel
+        let appState = AppState()
         
         viewModel.router = router
-        viewModel.view = viewController
+        viewModel.appState = appState
         
-        router.nav =  UINavigationController.init(rootViewController: viewController)
-        
-        return router.nav
+        viewController.viewModel = viewModel
+        router.viewController =  viewController
+        return router.viewController
         
     }
     
-    func showPersonsList() {
+    func mostrarHome() {
         let vc = LoginRouter.getController()
-        self.nav.pushViewController(vc, animated: true)
+        self.viewController.navigationController?.pushViewController(vc, animated: true)
     }
 }

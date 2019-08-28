@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MyR-SC-4YB" customClass="LoginView" customModule="arquitectura" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GXe-Cd-gMt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31L-8T-yXv">
@@ -36,11 +36,16 @@
                                 <rect key="frame" x="41" y="127" width="239" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="showNextScreen:" destination="MyR-SC-4YB" eventType="touchUpInside" id="8oY-3J-Phx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nxd-bD-fXy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SRB-xK-E5Q"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="btnIngreso" destination="dfU-1g-KGL" id="ko6-Z7-dtV"/>
                         <outlet property="txtClave" destination="bXa-bE-Mvg" id="T6t-Vp-hL6"/>
@@ -49,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pv-tc-nhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110.625" y="161.61971830985917"/>
+            <point key="canvasLocation" x="2105.625" y="161.61971830985917"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,7 @@ protocol LoginViewProtocol : class {
 }
 
 class LoginView: UIViewController {
+    
 
     @IBOutlet weak var txtCorreo: UITextField!
     @IBOutlet weak var txtClave: UITextField!
@@ -26,9 +27,22 @@ class LoginView: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        viewModel.appState.observer(observer: self)
+        
+        initView()
     }
     
-
+    func initView(){
+        txtCorreo.text = "User: " + viewModel.appState.usuario.correo
+        txtClave.text = "clave: " + viewModel.appState.usuario.clave
+    }
+    
+    @IBAction func showNextScreen(_ sender: Any) {
+        
+        viewModel.login(correo: txtCorreo.text!, clave: txtClave.text!)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -41,9 +55,16 @@ class LoginView: UIViewController {
 
 }
 
-extension LoginView : LoginViewProtocol {
-    
-    func didLoadView() {
+extension LoginView: ObserverState {
+    func newState() {
+        print(viewModel.appState.usuario.toJSON())
+        print("Se actualiza el modelo")
+        initView()
         
     }
+    
 }
+    
+
+
+
