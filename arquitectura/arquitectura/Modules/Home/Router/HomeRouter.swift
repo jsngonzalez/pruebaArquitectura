@@ -1,20 +1,19 @@
 //
-//  HomeRouting.swift
-//  arquitectura
-//
-//  Created by Jeisson Gonzalez on 8/28/19.
+//  Created by jsn with love for you.
 //  Copyright © 2019 hidesoft. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class HomeRouting: BaseRouting {
-
+class HomeRouter:BaseRouting {
+    
+    
     static func getController() -> HomeView {
         
         let view = instance(HomeView.self)
         
-        let router = HomeRouting()
+        let router = HomeRouter()
         let viewModel = HomeViewModel()
         
         router.view = view
@@ -25,9 +24,16 @@ class HomeRouting: BaseRouting {
         
     }
     
-    func cerrar(){
-        BaseRouting.startApp()
+    
+
+    /*
+     // MARK: - Functions for navigation
+     // optional functions:
+     //self.push(viewController: UIViewController)
+     
+    func finish() {
+        //let vc = HomeRouter.getController()
+        //self.push(viewController: vc)
     }
-    
-    
+     */
 }

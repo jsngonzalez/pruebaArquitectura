@@ -7,7 +7,7 @@ import ObjectMapper
 
 // MARK: - ObjectMapper dependence but you can use Codable
 
-class ___VARIABLE_moduleName___Model: Mappable {
+class HomeModel: Mappable {
     //var correo = ""
     
     required init?(map: Map){

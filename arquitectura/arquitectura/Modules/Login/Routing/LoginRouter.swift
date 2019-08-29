@@ -29,7 +29,7 @@ class LoginRouter:BaseRouting {
     
     
     func finish() {
-        let vc = HomeRouting.getController()
+        let vc = HomeRouter.getController()
         self.push(viewController: vc)
     }
 }

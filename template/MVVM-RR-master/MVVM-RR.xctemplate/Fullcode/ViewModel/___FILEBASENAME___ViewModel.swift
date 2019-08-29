@@ -5,8 +5,8 @@
 
 import UIKit
 
-class HomeViewModel : BaseViewModel {
+class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
     
-    var router: HomeRouter!
+    var router: ___VARIABLE_moduleName___Router!
     
 }

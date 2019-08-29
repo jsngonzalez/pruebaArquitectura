@@ -1,50 +1,59 @@
-//  ___FILEHEADER___
+//
+//  Created by jsn with love for you.
+//  Copyright © 2019 hidesoft. All rights reserved.
+//
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
+class ___VARIABLE_moduleName___View: BaseView {
 
-    // OUTLETS HERE
+    // MARK: - IBOutlets
+    
 
-    // VARIABLES HERE
-    var viewModel = ___VARIABLE_productName:identifier___ViewModel()
 
+    // MARK: - ViewModel
+    var viewModel: ___VARIABLE_moduleName___ViewModel!
+    
+
+
+    // MARK: - Fucntions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupViewModel()
-    }
-    
-    fileprivate func setupViewModel() {
 
-        self.viewModel.showAlertClosure = {
-            let alert = self.viewModel.alertMessage ?? ""
-            print(alert)
-        }
+        //observer of AppState changes
+        //viewModel.appState.observer(observer: self)
+        initView()
         
-        self.viewModel.updateLoadingStatus = {
-            if self.viewModel.isLoading {
-                print("LOADING...")
-            } else {
-                 print("DATA READY")
-            }
-        }
-
-        self.viewModel.internetConnectionStatus = {
-            print("Internet disconnected")
-            // show UI Internet is disconnected
-        }
-
-        self.viewModel.serverErrorStatus = {
-            print("Server Error / Unknown Error")
-            // show UI Server is Error
-        }
-
-        self.viewModel.didGetData = {
-            // update UI after get data
-        }
-
     }
     
+    
+    func initView(){
+        
+    }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
+
+
+/*
+ // MARK: - ObserverDelegate
+extension ___VARIABLE_moduleName___View: ObserverState {
+    
+    func newState() {
+        initView()
+    }
+}
+*/
+    
+
 
 
