@@ -18,7 +18,6 @@
 		DE5156282315998600EB6793 /* UsuarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5156272315998600EB6793 /* UsuarioModel.swift */; };
 		DE5156422317252000EB6793 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5156412317252000EB6793 /* BaseView.swift */; };
 		DE515644231726D400EB6793 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE515643231726D400EB6793 /* BaseViewModel.swift */; };
-		DE515646231726E900EB6793 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE515645231726E900EB6793 /* BaseModel.swift */; };
 		DE51564B2317278800EB6793 /* BaseRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51564A2317278800EB6793 /* BaseRouting.swift */; };
 		DE5156542317506400EB6793 /* HomeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5156532317506400EB6793 /* HomeRouting.swift */; };
 		DE515658231750C200EB6793 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE515657231750C200EB6793 /* HomeView.swift */; };
@@ -44,7 +43,6 @@
 		DE5156272315998600EB6793 /* UsuarioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioModel.swift; sourceTree = "<group>"; };
 		DE5156412317252000EB6793 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		DE515643231726D400EB6793 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		DE515645231726E900EB6793 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		DE51564A2317278800EB6793 /* BaseRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouting.swift; sourceTree = "<group>"; };
 		DE5156532317506400EB6793 /* HomeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouting.swift; sourceTree = "<group>"; };
 		DE515657231750C200EB6793 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				DE51561F2315722900EB6793 /* Xibs */,
 				DE515623231598AB00EB6793 /* State */,
 				DE5156492317277E00EB6793 /* BaseRouting */,
-				DE51563F231724EB00EB6793 /* BaseModel */,
 				DE51563E231724C500EB6793 /* BaseViewModel */,
 				DE51563D231724B800EB6793 /* BaseView */,
 			);
@@ -201,14 +198,6 @@
 				DE515643231726D400EB6793 /* BaseViewModel.swift */,
 			);
 			path = BaseViewModel;
-			sourceTree = "<group>";
-		};
-		DE51563F231724EB00EB6793 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-				DE515645231726E900EB6793 /* BaseModel.swift */,
-			);
-			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		DE5156492317277E00EB6793 /* BaseRouting */ = {
@@ -419,7 +408,6 @@
 				DE51564B2317278800EB6793 /* BaseRouting.swift in Sources */,
 				DE5156252315991500EB6793 /* AppState.swift in Sources */,
 				DE60E88123147E600073D562 /* AppDelegate.swift in Sources */,
-				DE515646231726E900EB6793 /* BaseModel.swift in Sources */,
 				DE5156132314C97500EB6793 /* LoginRouter.swift in Sources */,
 				DE5156422317252000EB6793 /* BaseView.swift in Sources */,
 				DE515658231750C200EB6793 /* HomeView.swift in Sources */,
