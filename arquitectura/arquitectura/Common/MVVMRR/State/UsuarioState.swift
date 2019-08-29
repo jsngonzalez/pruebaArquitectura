@@ -9,6 +9,10 @@
 import UIKit
 import SwiftyUserDefaults
 
+extension DefaultsKeys {
+    static let usuario = DefaultsKey<[String: Any]>("obj_usuario", defaultValue: [:])
+}
+
 extension AppState {
     
     var usuario : UsuarioModel {

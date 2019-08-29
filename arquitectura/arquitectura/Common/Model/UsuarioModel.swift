@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class UsuarioModel: Mappable {
+class UsuarioModel: BaseModel, Mappable {
     var correo = ""
     var clave = ""
     

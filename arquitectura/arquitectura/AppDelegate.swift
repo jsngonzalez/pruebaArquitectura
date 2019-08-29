@@ -18,9 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        let nav = BaseRouter.nav()
-        nav.viewControllers = [LoginRouter.getController()]
-        window?.rootViewController = nav
+        BaseRouting.startApp()
         
         return true
     }

@@ -8,12 +8,7 @@
 
 import UIKit
 
-//MARK: - ViewModel communication
-protocol LoginViewProtocol : class {
-    func didLoadView()
-}
-
-class LoginView: UIViewController {
+class LoginView: BaseView {
     
 
     @IBOutlet weak var txtCorreo: UITextField!
@@ -25,21 +20,17 @@ class LoginView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
         viewModel.appState.observer(observer: self)
-        
         initView()
     }
     
     func initView(){
-        txtCorreo.text = "User: " + viewModel.appState.usuario.correo
-        txtClave.text = "clave: " + viewModel.appState.usuario.clave
+        txtCorreo.text = viewModel.appState.usuario.correo
+        txtClave.text = viewModel.appState.usuario.clave
+        
     }
     
     @IBAction func showNextScreen(_ sender: Any) {
-        
         viewModel.login(correo: txtCorreo.text!, clave: txtClave.text!)
     }
     
@@ -56,6 +47,7 @@ class LoginView: UIViewController {
 }
 
 extension LoginView: ObserverState {
+    
     func newState() {
         print(viewModel.appState.usuario.toJSON())
         print("Se actualiza el modelo")

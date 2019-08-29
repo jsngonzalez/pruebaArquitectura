@@ -8,21 +8,17 @@
 
 import UIKit
 
-class LoginViewModel {
+class LoginViewModel : BaseViewModel {
     
     var router: LoginRouter!
-    var person:LoginModel!
-    var appState:AppState!
-    
-    
-    func loadView() {
-        
-    }
     
     func login(correo:String,clave:String) {
-        
         appState.usuario = UsuarioModel(JSON: ["correo":correo,"clave":clave])!
-        router.mostrarHome()
-        
+        appState.login = true
+        //appState.unsubscribe()
+        router.finish()
     }
+    
+    
+    
 }
