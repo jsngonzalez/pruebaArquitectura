@@ -12,9 +12,5 @@ class BaseViewModel {
     
     var appState = AppState()
 
-    //MARK: -- Closure Collection
-    var showAlert: ((_ message:String) -> ())?
-    var isLoading: (() -> ())?
-    var internetConnectionError: (() -> ())?
     
 }

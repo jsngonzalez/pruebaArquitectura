@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SwiftyUserDefaults
 
 class LoginRouter:BaseRouting {
     
@@ -31,6 +30,6 @@ class LoginRouter:BaseRouting {
     
     func finish() {
         let vc = HomeRouting.getController()
-        view.navigationController?.pushViewController(vc, animated: true)
+        self.push(viewController: vc)
     }
 }

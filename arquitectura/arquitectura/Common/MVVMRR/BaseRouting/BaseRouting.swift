@@ -22,6 +22,23 @@ class BaseRouting {
         
     }
     
+    func push(viewController:UIViewController){
+      _viewController.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    class func start(inViewController viewController:UIViewController){
+        DispatchQueue.main.async {
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            appDelegate?.window?.rootViewController = viewController
+        }
+    }
+    
+    class func start(inNavigationController nav:UINavigationController){
+        DispatchQueue.main.async {
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            appDelegate?.window?.rootViewController = nav
+        }
+    }
     
     class func startApp() {
         let vc = LoginRouter.getController()
@@ -29,11 +46,8 @@ class BaseRouting {
         nav.navigationBar.isOpaque = true
         nav.viewControllers = [vc]
         
+        BaseRouting.start(inNavigationController: nav)
         
-        DispatchQueue.main.async {
-            let appDelegate = UIApplication.shared.delegate as? AppDelegate
-            appDelegate?.window?.rootViewController = nav
-        }
     }
     
     class func instance<T : UIViewController>(_ viewControllerClass: T.Type) -> T {

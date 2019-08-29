@@ -22,7 +22,9 @@ class LoginView: BaseView {
         super.viewDidLoad()
         viewModel.appState.observer(observer: self)
         initView()
+        
     }
+    
     
     func initView(){
         txtCorreo.text = viewModel.appState.usuario.correo
@@ -54,7 +56,6 @@ extension LoginView: ObserverState {
         initView()
         
     }
-    
 }
     
 

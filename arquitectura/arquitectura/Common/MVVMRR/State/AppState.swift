@@ -15,6 +15,15 @@ extension Notification.Name {
 
 protocol ObserverState {
     func newState()
+    func isLoading()
+    func showAlert(_ message:String)
+    func internetConnectionError()
+}
+
+extension ObserverState {
+    func isLoading() {}
+    func showAlert(_ message:String) {}
+    func internetConnectionError() {}
 }
 
 class AppState {

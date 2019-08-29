@@ -1,8 +1,8 @@
 //
-//  LoginState.swift
+//  AppState+extension.swift
 //  arquitectura
 //
-//  Created by Jeisson Gonzalez on 8/27/19.
+//  Created by MacBook on 8/28/19.
 //  Copyright © 2019 hidesoft. All rights reserved.
 //
 
@@ -15,6 +15,10 @@ extension DefaultsKeys {
 
 extension AppState {
     
+    private struct property {
+        static var login:Bool = false
+    }
+    
     var usuario : UsuarioModel {
         set {
             Defaults[.usuario] = newValue.toJSON()
@@ -26,6 +30,16 @@ extension AppState {
                 user = UsuarioModel(JSON: Defaults[.usuario])!
             }
             return user
+        }
+    }
+    
+    var login:Bool {
+        get {
+            return property.login
+        }
+        set(newValue) {
+            property.login = newValue
+            notify()
         }
     }
     
