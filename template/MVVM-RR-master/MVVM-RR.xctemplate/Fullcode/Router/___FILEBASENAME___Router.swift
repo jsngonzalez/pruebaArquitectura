@@ -26,14 +26,14 @@ class ___VARIABLE_moduleName___Router:BaseRouting {
     
     
 
-    /*
+    
      // MARK: - Functions for navigation
-     // optional functions:
-     //self.push(viewController: UIViewController)
-     
-    func finish() {
-        //let vc = ___VARIABLE_moduleName___Router.getController()
-        //self.push(viewController: vc)
+     // optional navigation functions:
+     // self.push(viewController: UIViewController)
+
+    func next() {
+        let vc = ___VARIABLE_moduleName___Router.getController()
+        self.push(viewController: vc)
     }
-     */
+     
 }
