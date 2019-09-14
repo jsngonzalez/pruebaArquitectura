@@ -8,8 +8,16 @@ import UIKit
 class ___VARIABLE_moduleName___View: BaseView {
 
     // MARK: - IBOutlets
-    
+    //@IBOutlet weak var table: UITableView!
 
+
+// MARK: - Cell Types
+/*
+    struct CellType {
+        static let cell1 = "Cell1"
+        static let cell2 = "Cell2"
+    }
+*/
 
     // MARK: - ViewModel
     var viewModel: ___VARIABLE_moduleName___ViewModel!
@@ -20,16 +28,34 @@ class ___VARIABLE_moduleName___View: BaseView {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //observer of AppState changes
-        //viewModel.appState.observer(observer: self)
         initView()
-        
+
+        //observer of AppStore changes
+        //observer()
     }
     
+    // MARK: - observer of AppStore changes
+    /*func observer(){
+        viewModel.appStore.observer(self) { (state) in
+            if state == .update {
+                self.initView()
+            }else if state == .alert {
+                self.mostrarMensaje()
+            }
+        }
+    }*/
+
     
+    // MARK: - Show Alert when exist error
+    func mostrarMensaje(){
+
+    }
+    
+    // MARK: - init view controller
     func initView(){
         
     }
+
     
     /*
     // MARK: - Navigation
@@ -42,17 +68,6 @@ class ___VARIABLE_moduleName___View: BaseView {
     */
 
 }
-
-
-/*
- // MARK: - ObserverDelegate
-extension ___VARIABLE_moduleName___View: ObserverState {
-    
-    func newState() {
-        initView()
-    }
-}
-*/
     
 
 
