@@ -11,19 +11,20 @@ class ___VARIABLE_moduleName___View: BaseView {
     //@IBOutlet weak var table: UITableView!
 
 
+// MARK: - Cell Types
+/*
+    struct CellType {
+        static let cell1 = "Cell1"
+        static let cell2 = "Cell2"
+    }
+*/
+
     // MARK: - ViewModel
     var viewModel: ___VARIABLE_moduleName___ViewModel!
     
 
 
     // MARK: - Fucntions
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if self.isMovingFromParent || isBeingDismissed {
-            viewModel.appStore.unsubscribe(self)
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

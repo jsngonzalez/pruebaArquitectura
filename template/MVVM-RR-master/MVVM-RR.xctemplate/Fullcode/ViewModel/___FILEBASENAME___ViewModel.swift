@@ -15,7 +15,11 @@ class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
         
     }
 
-    func next() {
+    func atras() {
+        router.atras()
+    }
+
+    func continuar() {
         router.next()
     }
     
@@ -49,6 +53,19 @@ class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
         }else{
             return 0
         }
-    }*/
+    }
+
+    func didSelectRowAt(_ tableView: UITableView, row: Int, inController cv:UIViewController) {
+        
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellType.header)
+        return cell
+    }
+    
+    
+    */
 
 }

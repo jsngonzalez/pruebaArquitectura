@@ -24,14 +24,15 @@ class ___VARIABLE_moduleName___Router:BaseRouting {
         
     }
     
-    
-
-    
      // MARK: - Functions for navigation
      // optional navigation functions:
      // self.push(viewController: UIViewController)
 
-    func next() {
+    func atras() {
+        view.navigationController?.popViewController(animated: true)
+    }
+
+    func continuar() {
         let vc = ___VARIABLE_moduleName___Router.getController()
         self.push(viewController: vc)
     }
