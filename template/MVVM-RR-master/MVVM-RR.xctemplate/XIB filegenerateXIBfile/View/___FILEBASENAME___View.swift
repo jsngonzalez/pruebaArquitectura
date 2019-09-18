@@ -36,19 +36,22 @@ class ___VARIABLE_moduleName___View: BaseView {
     
     // MARK: - observer of AppStore changes
     /*func observer(){
-        viewModel.appStore.observer(self) { (state) in
-            if state == .update {
-                self.initView()
-            }else if state == .alert {
-                self.mostrarMensaje()
-            }
-        }
+        viewModel.appStore.observer(self, whenNewState: {
+            self.reloadView()
+        }, whenError: { error in
+            self.validarError(error)
+        })
     }*/
 
+
+    // MARK: - When the app store is update
+    func reloadView(){
+        
+    }
     
     // MARK: - Show Alert when exist error
-    func mostrarMensaje(){
-
+    func validarError(_ error:ErrorModel){
+        
     }
     
     // MARK: - init view controller
