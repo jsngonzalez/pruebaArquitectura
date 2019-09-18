@@ -20,7 +20,7 @@ class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
     }
 
     func continuar() {
-        router.next()
+        router.continuar()
     }
     
     /*
