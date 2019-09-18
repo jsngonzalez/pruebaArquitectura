@@ -43,6 +43,11 @@ class ___VARIABLE_moduleName___View: BaseView {
         })
     }*/
 
+
+    // MARK: - When the app store is update
+    func reloadView(){
+        
+    }
     
     // MARK: - Show Alert when exist error
     func validarError(_ error:ErrorModel){
@@ -51,10 +56,6 @@ class ___VARIABLE_moduleName___View: BaseView {
     
     // MARK: - init view controller
     func initView(){
-        
-    }
-
-    func reloadView(){
         
     }
 
