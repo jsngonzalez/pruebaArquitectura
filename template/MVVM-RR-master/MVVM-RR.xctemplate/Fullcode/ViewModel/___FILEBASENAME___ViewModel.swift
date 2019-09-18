@@ -6,6 +6,14 @@
 import UIKit
 import ObjectMapper
 
+// MARK: - Cell Types
+/*
+struct Cell__VARIABLE_moduleName___Type {
+    static let cell1 = "Cell1"
+    static let cell2 = "Cell2"
+}*/
+
+
 class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
     
     // MARK: - Router
