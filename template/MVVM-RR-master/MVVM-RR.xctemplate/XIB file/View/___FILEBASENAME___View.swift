@@ -10,15 +10,6 @@ class ___VARIABLE_moduleName___View: BaseView {
     // MARK: - IBOutlets
     //@IBOutlet weak var table: UITableView!
 
-
-// MARK: - Cell Types
-/*
-    struct CellType {
-        static let cell1 = "Cell1"
-        static let cell2 = "Cell2"
-    }
-*/
-
     // MARK: - ViewModel
     var viewModel: ___VARIABLE_moduleName___ViewModel!
     
@@ -72,6 +63,58 @@ class ___VARIABLE_moduleName___View: BaseView {
 
 }
     
+/*
+// MARK: - UITableViewDelegate
+extension ResumenPagoView:UITableViewDataSource,UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = viewModel.cell(tableView, indexPath: indexPath)
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return viewModel.heightCell(indexPath: indexPath)
+        
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.container.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRowAt(indexPath)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let v = UIView()
+        v.backgroundColor = UIColor.clear
+        return v
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return viewModel.tableView(tableView, viewForHeaderInSection: section)
+    }
+    
+}
+*/
+
 
 
 

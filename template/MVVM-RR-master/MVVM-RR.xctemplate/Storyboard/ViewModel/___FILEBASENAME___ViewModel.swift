@@ -8,9 +8,9 @@ import ObjectMapper
 
 // MARK: - Cell Types
 /*
-struct Cell__VARIABLE_moduleName___Type {
-    static let cell1 = "Cell1"
-    static let cell2 = "Cell2"
+struct Cell___VARIABLE_moduleName___Type {
+    static let header = "Header"
+    static let cell = "Cell"
 }*/
 
 
@@ -35,17 +35,13 @@ class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
     // MARK: - TableviewDelegate
     // You can use this code for create datatable delegate
 
-    struct CellType {
-        static let cell = "Cell"
-    }
-
     func cell(_ tableView: UITableView, indexPath: IndexPath) ->  UITableViewCell {
         
         let item = appStore.store.container[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellType.cell, for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell___VARIABLE_moduleName___Type.cell, for: indexPath) as! UITableViewCell
         
-        if  item.cell == CellType.cell {
+        if  item.cell == Cell___VARIABLE_moduleName___Type.cell {
             cell.setup(viewModel: self, indexPath: indexPath)
         }
         
@@ -56,20 +52,20 @@ class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
         
         //let item = appStore.store.container[indexPath.row]
         
-        if item.cell == CellType.cell{
+        if item.cell == Cell___VARIABLE_moduleName___Type.cell{
             return 10
         }else{
             return 0
         }
     }
 
-    func didSelectRowAt(_ tableView: UITableView, row: Int, inController cv:UIViewController) {
+    func didSelectRowAt(_ indexPath: IndexPath) {
         
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellType.header)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell___VARIABLE_moduleName___Type.header)
         return cell
     }
     
