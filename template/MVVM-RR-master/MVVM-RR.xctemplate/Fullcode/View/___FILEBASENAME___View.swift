@@ -27,21 +27,30 @@ class ___VARIABLE_moduleName___View: BaseView {
     
     // MARK: - observer of AppStore changes
     /*func observer(){
-        viewModel.appStore.observer(self, whenNewState: {
+        viewModel.appStore.observer(self, whenNewStore: {
             self.reloadView()
-        }, whenError: { error in
-            self.validarError(error)
+        }, whenNewState: { state in
+            self.validarEstado(state)
         })
     }*/
-
+    
+    // MARK: - Show Alert when exist error
+    /*func validarEstado(_ state:StateModel){
+        
+        switch state.type {
+        case .error_servicio:
+            showAlert(state.mensaje)
+        case .mostrar_cargando:
+             showLoading()
+        case .ocultar_cargando:
+             hideLoading()
+        default:
+            return
+        }
+    }*/
 
     // MARK: - When the app store is update
     func reloadView(){
-        
-    }
-    
-    // MARK: - Show Alert when exist error
-    func validarError(_ error:ErrorModel){
         
     }
     
@@ -65,7 +74,7 @@ class ___VARIABLE_moduleName___View: BaseView {
     
 /*
 // MARK: - UITableViewDelegate
-extension ResumenPagoView:UITableViewDataSource,UITableViewDelegate {
+extension ___VARIABLE_moduleName___View:UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
