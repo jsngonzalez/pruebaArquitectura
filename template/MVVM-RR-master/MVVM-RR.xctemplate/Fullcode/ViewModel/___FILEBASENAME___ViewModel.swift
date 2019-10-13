@@ -39,7 +39,7 @@ class ___VARIABLE_moduleName___ViewModel : BaseViewModel {
         
         let item = appStore.store.container[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell___VARIABLE_moduleName___Type.cell, for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell___VARIABLE_moduleName___Type.cell, for: indexPath) as! Cell___VARIABLE_moduleName___
         
         if  item.cell == Cell___VARIABLE_moduleName___Type.cell {
             cell.setup(viewModel: self, indexPath: indexPath)
